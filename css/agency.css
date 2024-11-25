@@ -118,7 +118,7 @@ body {
 
 /* Style for the images */
 .gallery img {
-    height: 500px;            /* Set the height of the images */
+    height: 100px;            /* Set the height of the images */
     width: auto;              /* Keep the aspect ratio of the images */
     object-fit: cover;        /* Ensure images cover the container without distortion */
     display: block;           /* Make sure the images are treated as block elements */
