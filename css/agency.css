@@ -44,7 +44,7 @@ body {
 }
 
 /* Image container */
-.img {
+.imgfa {
   grid-column-start: 1;
   grid-column-end: 4; /* Make img take up the full width of the grid */
   grid-row-start: 2;
@@ -60,7 +60,7 @@ body {
 }
 
 /* Image inside the container */
-.img img {
+.imgfa img {
   height:100%; /* Make image take full width of container */
   width:100%; /* Make image take full height of container */
   object-fit: cover; /* Ensure image covers the space without distortion */
@@ -68,7 +68,7 @@ body {
 }
 
 /* Hover effect to zoom image */
-.img img:hover {
+.imgfa img:hover {
   transform: scale(1.1); /* Zoom effect on hover */
 }
  
