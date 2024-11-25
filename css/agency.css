@@ -71,6 +71,14 @@ body {
 .imgfa img:hover {
   transform: scale(1.1); /* Zoom effect on hover */
 }
+
+.imgfa img {
+    display: none; /* Hide all images initially */
+}
+.imgfa img:first-child {
+    display: block; /* Show the first image */
+}
+
  
   
 .container1{
