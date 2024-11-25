@@ -64,7 +64,7 @@ body {
   height:100%; /* Make image take full width of container */
   width:100%; /* Make image take full height of container */
   object-fit: cover; /* Ensure image covers the space without distortion */
-  transition: transform 0.3s ease; /* Smooth zoom on hover */
+  
 }
 
 /* Hover effect to zoom image */
@@ -72,13 +72,7 @@ body {
   transform: scale(1.1); /* Zoom effect on hover */
 }
 
-.imgfa img {
-    display: none; /* Hide all images initially */
-}
-.imgfa img:first-child {
-    display: block; /* Show the first image */
-}
-
+.
  
   
 .container1{
