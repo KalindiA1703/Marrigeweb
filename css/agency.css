@@ -10,13 +10,7 @@ body {
   background: #2E0406;
 }
 
-.gallery{
-  position:fixed;
-  height: 800px;
-  width:100%;
-  padding:20px;
-  overflow:hidden;
-}
+
 
 /* Gallery container */
 .gallery {
@@ -30,7 +24,7 @@ body {
 .container2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
-  grid-template-rows: 150px 450px; /* Set row heights */
+  grid-template-rows: 100px 600px; /* Set row heights */
   grid-template-areas: 
     "head head head"
     "img img img"; /* Make img take up the full second row */
@@ -67,8 +61,8 @@ body {
 
 /* Image inside the container */
 .img img {
-  width: 100%; /* Make image take full width of container */
-  height: 100%; /* Make image take full height of container */
+  height:600px; /* Make image take full width of container */
+  width:auto; /* Make image take full height of container */
   object-fit: cover; /* Ensure image covers the space without distortion */
   transition: transform 0.3s ease; /* Smooth zoom on hover */
 }
