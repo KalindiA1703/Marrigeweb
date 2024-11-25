@@ -106,17 +106,23 @@ body {
 
  
 
-  .gallery{
-    display:block;
-    max-height: 800px;
-    width:100%;
-  }
-.gallary img{
-  
-  height:500px;
-  width:500px;
-  justify-items:center;
-  align-items:center;
+ .gallery {
+    display: flex;
+    justify-content: center;  /* Horizontally center the images */
+    align-items: center;      /* Vertically center the images */
+    max-height: 800px;        /* Maximum height of the gallery */
+    width: 100%;              /* Take up the full width of the parent */
+    margin: 0 auto;           /* Center the gallery in the middle of the page */
+    overflow: hidden;         /* Hide any overflow if images go out of bounds */
+}
+
+/* Style for the images */
+.gallery img {
+    height: 500px;            /* Set the height of the images */
+    width: auto;              /* Keep the aspect ratio of the images */
+    object-fit: cover;        /* Ensure images cover the container without distortion */
+    display: block;           /* Make sure the images are treated as block elements */
+    margin: 0 auto;           /* Center the images horizontally */
 }
 
  
