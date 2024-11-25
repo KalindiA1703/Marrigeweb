@@ -19,10 +19,10 @@ body {
 
 .container2{
   display:grid;
-  grid-template-columns:1ftr;
+  grid-template-columns:1ftr 1ftr 1ftr;
   grid-template-rows:150px 450px;
-  grid-template-areas:"head"
-    "img";
+  grid-template-areas:" . head ."
+    ". img .";
   row-gap:100px;
 }
 
