@@ -10,6 +10,34 @@ body {
   background: #2E0406;
 }
 
+.sectiongallery{
+  height: 800px;
+  width=100%;
+}
+
+.container2{
+  display:grid;
+  grid-template-column:1ftr;
+  grid-template-row:20px 500px;
+  grid-template-areas:"head"
+    "img";
+  column-gap:20px;
+}
+
+.head{
+  align-items:center;
+  justify-content:center;
+}
+
+.img{
+   align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  border-color:Yellow;
+  object-fit:cover;
+}
+  
+  
 .container1{
     display:grid;
     grid-template-columns: repeat(5 1ftr);
