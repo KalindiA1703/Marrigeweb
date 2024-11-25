@@ -18,7 +18,7 @@ body {
 .container2{
   display:grid;
   grid-template-column:1ftr;
-  grid-template-row:20px 500px;
+  grid-template-row:1ftr 5ftr;
   grid-template-areas:"head"
     "img";
   column-gap:20px;
@@ -35,6 +35,8 @@ body {
   border-radius:10px;
   border-color:Yellow;
   object-fit:cover;
+  height: 500px
+  width:auto;
 }
   
   
