@@ -108,9 +108,10 @@ body {
 
  .gallery {
     display: flex;
+   border-radius: 10px;
     justify-content: center;  /* Horizontally center the images */
     align-items: center;      /* Vertically center the images */
-    max-height: 800px;        /* Maximum height of the gallery */
+    height: 800px;        /* Maximum height of the gallery */
     width: 100%;              /* Take up the full width of the parent */
     margin: 0 auto;           /* Center the gallery in the middle of the page */
     overflow: hidden;         /* Hide any overflow if images go out of bounds */
@@ -118,7 +119,7 @@ body {
 
 /* Style for the images */
 .gallery img {
-    height: 100px;            /* Set the height of the images */
+    height: 300px;            /* Set the height of the images */
     width: auto;              /* Keep the aspect ratio of the images */
     object-fit: cover;        /* Ensure images cover the container without distortion */
     display: block;           /* Make sure the images are treated as block elements */
