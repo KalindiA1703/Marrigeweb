@@ -51,7 +51,7 @@ body {
   grid-row-end: 3; /* Make img take up only the second row */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
   border: 5px solid yellow; /* Adds yellow border around the image */
   width: auto;
   height: 600px;
