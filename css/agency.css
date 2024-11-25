@@ -22,7 +22,7 @@ body {
   grid-template-columns:1ftr 1ftr 1ftr;
   grid-template-rows:150px 450px;
   grid-template-areas:" . head ."
-    ". img .";
+    "img img img";
   row-gap:50px;
   margin:50px;
 }
@@ -33,6 +33,8 @@ body {
 }
 
 .img{
+grid-column-start:1/3;
+  grid-row-start:2;
    align-items:center;
   justify-content:center;
   border-box: 5px solid yellow; /* Adds yellow border around the image */
