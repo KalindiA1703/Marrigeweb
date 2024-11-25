@@ -20,10 +20,10 @@ body {
 .container2{
   display:grid;
   grid-template-columns:1ftr;
-  grid-template-rows:1ftr 5ftr;
+  grid-template-rows:150px 450px;
   grid-template-areas:"head"
     "img";
-  column-gap:100px;
+  row-gap:100px;
 }
 
 .head{
@@ -34,9 +34,8 @@ body {
 .img{
    align-items:center;
   justify-content:center;
-   border: 5px solid yellow; /* Adds yellow border around the image */
-  border-radius: 10px; /* Optional: rounds the corners of the border */
-  object-fit: cover; /* Ensures image covers the space without distortion */
+  border-box: 5px solid yellow; /* Adds yellow border around the image */
+object-fit: cover; /* Ensures image covers the space without distortion */
 }
 
 .img img {
