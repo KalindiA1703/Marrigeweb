@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Image Slider with Four Grids</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.grid-item {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.grid-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+     </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <div class="grid-item">
+                    <img src="img/about/1.jpg" alt="Image 1">
+                    <p>Caption 1</p>
+                </div>
+                <div class="grid-item">
+                <img src="img/about/2.jpg" alt="Image 2">
+                    <p>Caption 2</p>
+                </div>
+                <div class="grid-item">
+                <img src="img/about/3.jpg" alt="Image 1">
+                    <p>Caption 3</p>
+                </div>
+                <div class="grid-item">
+                <img src="img/about/4.jpg" alt="Image 1">
+                    <p>Caption 4</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="grid-item">
+                <img src="img/about/5.jpg" alt="Image 1">
+                    <p>Caption 5</p>
+                </div>
+                <div class="grid-item">
+                <img src="img/about/6.jpg" alt="Image 1">
+                    <p>Caption 6</p>
+                </div>
+                <div class="grid-item">
+                <img src="img/about/1.jpg" alt="Image 1">
+                    <p>Caption 7</p>
+                </div>
+                <div class="grid-item">
+                <img src="img/about/2.jpg" alt="Image 1">
+                    <p>Caption 8</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+     <script>
+        const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+
+let currentIndex = 0;
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function autoSlide() {
+    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+    updateSlider();
+}
+
+// Start the automatic sliding
+setInterval(autoSlide, 3000); // Slide every 3 seconds
+
+     </script>
+</body>
+</html>
