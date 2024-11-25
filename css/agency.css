@@ -34,9 +34,15 @@ body {
   justify-content:center;
   height: 500px
   width:auto;
-  border-radius: 10px;
-  border: 5px solid yellow; /* Set a yellow border around the image */
+ 
+}
+
+.img img {
+  width: 100%; /* Ensure image takes full width of its container */
+  height: 100%; /* Ensure image takes full height of its container */
   object-fit: cover; /* Ensures image covers the space without distortion */
+  border: 5px solid yellow; /* Adds yellow border around the image */
+  border-radius: 10px; /* Optional: rounds the corners of the border */
 }
   
   
