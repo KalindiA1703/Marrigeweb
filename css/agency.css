@@ -23,7 +23,8 @@ body {
   grid-template-rows:150px 450px;
   grid-template-areas:" . head ."
     ". img .";
-  row-gap:100px;
+  row-gap:50px;
+  margin:50px;
 }
 
 .head{
