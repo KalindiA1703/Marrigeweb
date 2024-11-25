@@ -233,25 +233,16 @@
     
    <section id="gallery" class="gallery">
             <!-- Wedding Venue Photos Section -->
-           <div class="container2">
-            <div class="itema">
-                <h2>Gallary</h2>
-            </div>
-            <div class="itemb">
-                <img src="../marriage/img/about1/bp3.jfif" href="">
-            </div>
-            <div class="itemc">
-                <img src="../marriage/img/about1/bp3.jfif">
-            </div>
-            <div class="itemd">
-                <img src="../marriage/img/about1/bp1.jfif">
-            </div>
-            <div class="iteme">
-                <img src="../marriage/img/about1/bp4.jfif">
-            </div>
-           
-        </div>
-     </Section>
+    <div>           
+    <h2>Gallary</h2>
+    </div>
+<div class="gallery">
+        <img src="img/about1/1124.png" alt="Image 1">
+        <img src="img/about1/1123.png" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
+    </div>
+    </Section>
 
     <!-- Team Section -->
 
@@ -367,6 +358,25 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+<script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".gallery img");
+
+        function showNextImage() {
+            // Hide all images
+            images.forEach((img) => img.style.display = "none");
+
+            // Show the current image
+            images[currentIndex].style.display = "block";
+
+            // Move to the next image
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Start the image slideshow
+        setInterval(showNextImage, 3000);  // Change image every 3 seconds
+        showNextImage();  // Display the first image immediately
+    </script>
 
     
 </body>
