@@ -107,9 +107,17 @@ body {
  
 
   .gallery{
-    max-height: 1200px;
+    display:block;
+    max-height: 800px;
     width:100%;
   }
+.gallary img{
+  
+  height:500px;
+  width:500px;
+  justify-items:center;
+  align-items:center;
+}
 
  
 .text-muted {
