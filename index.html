@@ -359,27 +359,25 @@
     <script src="js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/agency.min.js"></script>
-<script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll(".img img");
+    <script src="js/agency.min.js">
+let currentIndex = 0;
+const images = document.querySelectorAll(".img img");
 
-        function showNextImage() {
-            // Hide all images
-            images.forEach((img) => img.style.display = "none");
+function showNextImage() {
+    // Hide all images using visibility (images still take up space)
+    images.forEach((img) => img.style.visibility = "hidden");
 
-            // Show the current image
-            images[currentIndex].style.display = "block";
+    // Show the current image
+    images[currentIndex].style.visibility = "visible";
 
-            // Move to the next image
-            currentIndex = (currentIndex + 1) % images.length;
-        }
+    // Move to the next image
+    currentIndex = (currentIndex + 1) % images.length;
+}
 
-        // Start the image slideshow
-        setInterval(showNextImage, 3000);  // Change image every 3 seconds
-        showNextImage();  // Display the first image immediately
-    </script>
-
+// Start the image slideshow
+setInterval(showNextImage, 3000);  // Change image every 3 seconds
+showNextImage();  // Display the first image immediately
+</script>
     
 </body>
 </html>
