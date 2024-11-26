@@ -12,55 +12,75 @@ body {
 
 
 
-/* General Gallery Styles */
+/* General Gallery Section */
 .gallery {
-  display:flex;
-  flex-direction:column;
-    width: 100%; /* Ensure gallery takes full width of the screen */
-    height: 800px; /* Set gallery section height */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center the gallery items horizontally */
-    align-items: center; /* Center the gallery items vertically */
-    position: relative; /* Ensure buttons and container position properly */
-    background-color: #2E0406;
+    width: 100%; /* Full width of the screen */
+    height: 800px; /* Fixed height for the gallery section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Light background for a romantic, soft look */
+    padding: 50px 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
+}
+
+/* Gallery Heading */
+.gallery h2 {
+    font-size: 36px;
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    color: #6d4f3c; /* A soft brown color for the heading */
+    text-align: center;
+    margin-bottom: 40px; /* Add spacing below the heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Gallery Item Container */
 .gallery-item {
     position: relative;
-    overflow: hidden; /* Hide overflowing content */
-    justify-content: center; /* Center the gallery items horizontally */
-    align-items: center; /* Center the gallery items vertically */
-    width: 80%; /* Width less than the section to leave gaps */
-    height: 600px; /* Fixed height for gallery items */
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    background-color: #2E0406;
-   
+    width: 80%; /* Width is 80% of the section width (with gaps on left/right) */
+    max-width: 1200px; /* Maximum width to prevent the images from becoming too large */
+    height: 600px; /* Fixed height for each gallery item */
+    margin-bottom: 30px; /* Space between multiple gallery items */
+    overflow: hidden;
+    border-radius: 12px; /* Round corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-/* Slider Container */
+/* Hover Effect on Gallery Item */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Slider Container for images */
 .slider-container {
-    position: absolute; /* Absolute to overlay on the image */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width of gallery item */
-    height: 100%; /* Full height of gallery item */
-    display: block; /* Always visible now */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden; /* Hide overflowing content */
 }
 
-/* Slider (flexbox to display images side by side) */
+/* Slider (Flexbox for horizontal scrolling) */
 .slider {
     display: flex;
-    width: 100%; /* Total width: 4 images, each taking 100% of the container */
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider img {
-    width: 100%; /* Each image takes up 100% of the slider width */
-    height: 100%; /* Ensure the image fills the container */
-    object-fit: cover; /* Fill the container without distortion */
-    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container without stretching */
+    border-radius: 12px; /* Rounded corners for images */
+    transition: transform 0.5s ease-in-out; /* Smooth zoom effect on hover */
+}
+
+/* Hover effect on images */
+.slider img:hover {
+    transform: scale(1.1); /* Zoom effect */
 }
 
 /* Navigation Buttons (Prev/Next) */
@@ -72,9 +92,11 @@ body {
     color: white;
     font-size: 24px;
     border: none;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10; /* Make sure buttons are always on top of images */
+    transition: background-color 0.3s ease;
 }
 
 .button1.prev {
@@ -85,37 +107,33 @@ body {
     right: 10px;
 }
 
-/* Show Slider on Hover */
-.gallery-item:hover .slider-container {
-    display: block; /* Ensure the slider is always visible */
-}
-
+/* Hover effect for navigation buttons */
 .button1:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
 }
 
-/* Make gallery responsive */
+/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
-    .gallery {
-        height: 600px; /* Reduce gallery section height on smaller screens */
+    .gallery h2 {
+        font-size: 28px; /* Slightly smaller heading on mobile */
+        margin-bottom: 20px; /* Less spacing between heading and images */
     }
 
     .gallery-item {
-        width: 90%; /* Increase width on smaller screens */
+        width: 90%; /* More flexible width on smaller screens */
+        margin-bottom: 20px; /* Less bottom margin */
     }
 }
 
 @media (max-width: 480px) {
-    .gallery {
-        height: 500px; /* Further reduce gallery section height on very small screens */
+    .gallery h2 {
+        font-size: 24px; /* Smaller heading on very small screens */
     }
 
     .gallery-item {
-        width: 95%; /* Increase width on very small screens */
+        width: 100%; /* Full width on very small screens */
     }
 }
-
- 
   
 .container1{
     display:grid;
