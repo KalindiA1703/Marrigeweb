@@ -33,6 +33,7 @@ body {
     height: 600px; /* Fixed height for gallery items */
     border: 2px solid #ddd;
     border-radius: 8px;
+   background-color: #2E0406;
    
 }
 
