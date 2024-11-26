@@ -244,7 +244,6 @@
 <!-- Gallery Section -->
 <div class="gallery">
     <div class="gallery-item">
-        <img src="img/about1/ak4.jpeg" alt="Image 1">
         <div class="slider-container">
             <div class="slider">
                 <img src="img/about1/ak4.jpeg" alt="Slider Image 1">
@@ -374,7 +373,8 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
-    let currentSlide = 0;
+  <script>
+   let currentSlide = 0;
 
 // Function to move the slider
 function moveSlide(step) {
@@ -395,6 +395,7 @@ function moveSlide(step) {
     const slider = document.querySelector('.slider');
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+   </script> 
     
 </body>
 </html>
