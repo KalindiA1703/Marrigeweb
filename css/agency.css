@@ -51,7 +51,7 @@ body {
     border-radius: 8px;
 }
 
-button {
+button1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -64,11 +64,11 @@ button {
     border-radius: 50%;
 }
 
-button.prev {
+button1.prev {
     left: 10px;
 }
 
-button.next {
+button1.next {
     right: 10px;
 }
 
@@ -77,7 +77,7 @@ button.next {
     display: block; /* Show slider when hovering */
 }
 
-button:hover {
+button1:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
  
