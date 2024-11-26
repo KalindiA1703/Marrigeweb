@@ -233,10 +233,10 @@
     <div class="gallery-item">
         <div class="slider-container">
             <div class="slider">
-                 <img src="https://via.placeholder.com/600x400?text=Image+1" alt="Slider Image 1">
-                <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Slider Image 2">
-                <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Slider Image 3">
-                <img src="https://via.placeholder.com/600x400?text=Image+4" alt="Slider Image 4">
+                <img src="img/about1/ak4.jpeg" alt="Slider Image 1">
+                <img src="img/about1/ak3.jpeg" alt="Slider Image 2">
+                <img src="img/about1/ak2.jpeg" alt="Slider Image 3">
+              <img src="img/about1/ak1 (1).jpeg" alt="Slider Image 4">
             </div>
             <button class="button1 prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="button1 next" onclick="moveSlide(1)">&#10095;</button>
@@ -360,27 +360,42 @@
     <script src="js/contact_me.js"></script>
 
   
-   let currentSlide = 0;
+let currentSlide = 0;
 
 // Function to move the slider
 function moveSlide(step) {
     const slides = document.querySelectorAll('.slider img');
     const totalSlides = slides.length;
 
+    // Update the current slide index
     currentSlide += step;
 
-    // Loop through slides
+    // Loop the slides
     if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
+        currentSlide = totalSlides - 1; // Go to the last slide
     }
     if (currentSlide >= totalSlides) {
-        currentSlide = 0;
+        currentSlide = 0; // Go to the first slide
     }
 
-    // Move the slider
+    // Log the current slide index to check
+    console.log("Current slide index: ", currentSlide);
+
+    // Move the slider by changing the transform property
     const slider = document.querySelector('.slider');
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`; // Move slider left by 100% for each slide
 }
+
+// This will show the slider on hover
+document.querySelector('.gallery-item').addEventListener('mouseenter', function() {
+    document.querySelector('.slider-container').style.display = 'block';
+});
+
+// Hide the slider when the mouse leaves
+document.querySelector('.gallery-item').addEventListener('mouseleave', function() {
+    document.querySelector('.slider-container').style.display = 'none';
+});
+
    
 </body>
 </html>
