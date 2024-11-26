@@ -358,7 +358,27 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
-    <
+    let currentSlide = 0;
+
+// Function to move the slider
+function moveSlide(step) {
+    const slides = document.querySelectorAll('.slider img');
+    const totalSlides = slides.length;
+
+    currentSlide += step;
+
+    // Loop through slides
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    }
+
+    // Move the slider
+    const slider = document.querySelector('.slider');
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
     
 </body>
 </html>
