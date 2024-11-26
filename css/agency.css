@@ -86,69 +86,6 @@ button.next {
 button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-
-/* Gallery container */
-.gallery {
-  height: 800px;
-  width: 100%;
-  padding: 20px;
-  overflow: hidden;
-}
-
-/* Container with grid layout */
-.container2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
-  grid-template-rows: 100px 600px; /* Set row heights */
-  grid-template-areas: 
-    "head head head"
-    "img img img"; /* Make img take up the full second row */
-  row-gap: 50px;
-  margin: 50px;
-}
-
-/* Head section - optional centering */
-.head {
-  grid-column-start: 1;
-  grid-column-end: 4; /* Span across all 3 columns */
-  grid-row-start: 1;
-  grid-row-end: 2; /* Make head take up only the first row */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Image container */
-.imgfa {
-  grid-column-start: 1;
-  grid-column-end: 4; /* Make img take up the full width of the grid */
-  grid-row-start: 2;
-  grid-row-end: 3; /* Make img take up only the second row */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid yellow; /* Adds yellow border around the image */
-  width: 100%;
-  height: 600px;
-  overflow: hidden; /* Prevents image from overflowing */
-  box-sizing:border-box;
-}
-
-/* Image inside the container */
-.imgfa img {
-  height:100%; /* Make image take full width of container */
-  width:100%; /* Make image take full height of container */
-  object-fit: cover; /* Ensure image covers the space without distortion */
-  
-}
-
-/* Hover effect to zoom image */
-.imgfa img:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
-}
-
-.
  
   
 .container1{
