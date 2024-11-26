@@ -14,48 +14,24 @@ body {
 
 /* General Gallery Styles */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns in the gallery */
-    gap: 15px;
-    padding: 20px;
-    width: 100%; /* Ensure gallery takes full width */
-    height:800px;
-}
-
-/* General Gallery Styles */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns in the gallery */
-    gap: 15px;
-    padding: 20px;
-    width: 100%; /* Ensure gallery takes full width */
+    width: 100%; /* Ensure gallery takes full width of the screen */
     height: 800px; /* Set gallery section height */
-    box-sizing: border-box;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the gallery items horizontally */
+    align-items: center; /* Center the gallery items vertically */
+    position: relative; /* Ensure buttons and container position properly */
+    background-color: #f0f0f0; /* Background color for the gallery section */
 }
 
 /* Gallery Item Container */
 .gallery-item {
     position: relative;
     overflow: hidden; /* Hide overflowing content */
+    width: 80%; /* Width less than the section to leave gaps */
+    height: 600px; /* Fixed height for gallery items */
     border: 2px solid #ddd;
     border-radius: 8px;
-    height: 600px; /* Set a fixed height for gallery items */
-    width: 80%; /* Width less than the gallery section to leave gaps */
-    margin: 0 auto; /* Center the gallery items horizontally */
-    display: flex; /* Flexbox ensures image scaling */
-    justify-content: center; /* Center images inside */
-    align-items: center; /* Align images vertically */
-    background-color: #000; /* Add a background color so the container is visible */
-}
-
-/* Gallery Item Images */
-.gallery-item img {
-    width: 100%; /* Image will take full width of .gallery-item */
-    height: 100%; /* Ensure image fills the container height */
-    object-fit: cover; /* Ensures images cover the area without distortion */
-    border-radius: 8px;
-    transition: opacity 0.3s ease; /* Smooth transition for image loading */
-    opacity: 1; /* Ensure images are visible by default */
+    background-color: #000; /* Make it visible in case of no image */
 }
 
 /* Slider Container */
@@ -63,12 +39,12 @@ body {
     position: absolute; /* Absolute to overlay on the image */
     top: 0;
     left: 0;
-    width: 100%; /* Same width as the .gallery-item */
-    height: 100%;
+    width: 100%; /* Full width of gallery item */
+    height: 100%; /* Full height of gallery item */
     display: block; /* Always visible now */
 }
 
-/* Slider (Flexbox to display images side by side) */
+/* Slider (flexbox to display images side by side) */
 .slider {
     display: flex;
     width: 400%; /* Total width: 4 images, each taking 100% of the container */
@@ -106,7 +82,7 @@ body {
 
 /* Show Slider on Hover */
 .gallery-item:hover .slider-container {
-    display: block; /* Show the slider when hovering */
+    display: block; /* Ensure the slider is always visible */
 }
 
 .button1:hover {
@@ -116,7 +92,7 @@ body {
 /* Make gallery responsive */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+        height: 600px; /* Reduce gallery section height on smaller screens */
     }
 
     .gallery-item {
@@ -126,13 +102,14 @@ body {
 
 @media (max-width: 480px) {
     .gallery {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
+        height: 500px; /* Further reduce gallery section height on very small screens */
     }
 
     .gallery-item {
         width: 95%; /* Increase width on very small screens */
     }
 }
+
  
   
 .container1{
