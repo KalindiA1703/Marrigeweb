@@ -10,6 +10,20 @@ body {
   background-color: #2E0406;
 }
 
+.section {
+  position: relative;
+  padding-bottom: 40px; /* Add spacing below content */
+}
+
+.section:after {
+  content: "";
+  display: block;
+  background: url('img/about1/border.jfif') no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 20px; /* Adjust height to match your divider */
+  margin: 20px auto;
+}
 
 
 /* General Gallery Section */
