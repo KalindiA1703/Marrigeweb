@@ -623,21 +623,27 @@ section h3.section-subheading {
     margin: 0 0 30px;
   }
 }
+
+ .timeline::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/about1/WhatsApp Image 2024-11-26 at 5.10.07 PM.jpeg'); /* Set your background image here */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Set background opacity to 50% */
+    z-index: -1; /* Place the background behind the text */
+    background-repeat: no-repeat;
+  }
 .timeline {
   list-style: none;
   padding: 0;
   position: relative;
 }
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: "";
-  width: 2px;
-  background-color: #f1f1f1;
-  left: 40px;
-  margin-left: -1.5px;
-}
+
 .timeline > li {
   margin-bottom: 50px;
   position: relative;
