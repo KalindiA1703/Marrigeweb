@@ -12,48 +12,60 @@ body {
 
 
 
-section gallery {
-    height: 800px;
-    width:100%;
+/* General Gallery Styles */
+.gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 columns in the gallery */
     gap: 15px;
     padding: 20px;
+    width: 100%; /* Ensure gallery takes full width */
 }
 
+/* Gallery Item Container */
 .gallery-item {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflowing content */
     border: 2px solid #ddd;
     border-radius: 8px;
-   width:100%;
+    width: 100%; /* Ensure gallery item takes full width */
+    height: 300px; /* Set a fixed height for the gallery items */
+    display: flex; /* Flexbox ensures image scaling */
+    justify-content: center; /* Center images inside */
+    align-items: center; /* Align images vertically */
 }
 
+/* Gallery Item Images */
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
     border-radius: 8px;
 }
 
-/* Slider Styles */
+/* Slider Container */
 .slider-container {
-    position: relative;
-    display: none; /* Hide the slider by default */
-    width: 100%;
+    position: absolute; /* Absolute to overlay on the image */
+    top: 0;
+    left: 0;
+    width: 100%; /* Same width as the .gallery-item */
     height: 100%;
+    display: none; /* Hide by default, show on hover */
 }
 
+/* Slider (Flexbox to display images side by side) */
 .slider {
     display: flex;
-    transition: transform 0.3s ease;
+    width: 400%; /* Total width: 4 images, each taking 100% of the container */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
 }
 
 .slider img {
-    width: 100%;
+    width: 100%; /* Each image takes up 100% of the slider width */
     height: auto;
     border-radius: 8px;
 }
 
+/* Navigation Buttons (Prev/Next) */
 .button1 {
     position: absolute;
     top: 50%;
@@ -75,14 +87,15 @@ section gallery {
     right: 10px;
 }
 
-/* Add hover effects */
+/* Show Slider on Hover */
 .gallery-item:hover .slider-container {
-    display: block; /* Show slider when hovering */
+    display: block; /* Show the slider when hovering */
 }
 
-button1:hover {
+.button1:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
  
   
 .container1{
