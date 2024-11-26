@@ -231,20 +231,37 @@
 
    <!--Gallery Section-->
     
-   <section id="gallery" class="gallery">
-            <!-- Wedding Venue Photos Section -->
-    <div class="container2" id="container2">  
-     <div class="head" id="head">
-      <h2>Gallery</h2>
-     </div>
-<div class="imgfa" id="imgfa">    
-        <img src="img/about1/ak1 (1).jpeg" alt="Image 1">
-        <img src="img/about1/ak3.jpeg" alt="Image 2">
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery with Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Gallery Section -->
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="image1.jpg" alt="Image 1">
+        <div class="slider-container">
+            <div class="slider">
+                <img src="slider-image1.jpg" alt="Slider Image 1">
+                <img src="slider-image2.jpg" alt="Slider Image 2">
+                <img src="slider-image3.jpg" alt="Slider Image 3">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
     </div>
-    </div>
-    </Section>
+    <!-- Repeat similar items for other images -->
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
 
     <!-- Team Section -->
 
@@ -362,7 +379,7 @@
 
 // Function to move the slider
 function moveSlide(step) {
-    const slides = document.querySelectorAll('.slider imgfa');
+    const slides = document.querySelectorAll('.slider img');
     const totalSlides = slides.length;
 
     currentSlide += step;
@@ -376,7 +393,7 @@ function moveSlide(step) {
     }
 
     // Move the slider
-    const slider = document.querySelector('.sliderfa');
+    const slider = document.querySelector('.slider');
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
     
