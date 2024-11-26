@@ -362,7 +362,7 @@
 
 // Function to move the slider
 function moveSlide(step) {
-    const slides = document.querySelectorAll('.slider img');
+    const slides = document.querySelectorAll('.slider imgfa');
     const totalSlides = slides.length;
 
     currentSlide += step;
@@ -376,7 +376,7 @@ function moveSlide(step) {
     }
 
     // Move the slider
-    const slider = document.querySelector('.slider');
+    const slider = document.querySelector('.sliderfa');
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
     
