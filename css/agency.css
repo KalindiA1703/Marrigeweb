@@ -35,7 +35,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5; /* Light background for a romantic, soft look */
+    background-color: #2E0406;; /* Light background for a romantic, soft look */
     padding: 50px 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
 }
