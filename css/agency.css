@@ -27,13 +27,13 @@ body {
 .gallery-item {
     position: relative;
     overflow: hidden; /* Hide overflowing content */
-   justify-content: center; /* Center the gallery items horizontally */
+    justify-content: center; /* Center the gallery items horizontally */
     align-items: center; /* Center the gallery items vertically */
-    width: 600px; /* Width less than the section to leave gaps */
+    width: 80%; /* Width less than the section to leave gaps */
     height: 600px; /* Fixed height for gallery items */
     border: 2px solid #ddd;
     border-radius: 8px;
-   background-color: #2E0406;
+    background-color: #2E0406;
    
 }
 
