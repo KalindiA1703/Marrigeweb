@@ -639,10 +639,7 @@ section h3.section-subheading {
   list-style: none;
   padding: 0;
   position: relative;
-  background-image:url('img/about1/WhatsApp Image 2024-11-26 at 5.10.07 PM.jpeg');
-  opacity:0.5;
-  z-index:-1
-  position:cover;
+  
 }
 
 .timeline > li {
