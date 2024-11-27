@@ -22,8 +22,9 @@ body {
     background-color: #2E0406;; /* Light background for a romantic, soft look */
     padding: 50px 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
- border-bottom:20px solid green;
-  margin:0px 0px 20px 0px;
+   border-image-source:url('img/about1/border.jfif');
+    
+   margin:0px 0px 20px 0px;
 }
 
 /* Gallery Heading */
