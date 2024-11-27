@@ -810,17 +810,11 @@ aside.clients img {
 }
 
 .bg3 {
-  
-  background-color: #2E0406;
+ background-color: #2E0406;
 
-  
-  }
+}
 
-  section
-
- 
-
-  .popup {
+  section .popup {
     display: none; /* Initially hidden */
     position: absolute; /* Position the popup relative to the icon */
     top: 0px; /* Adjust distance of popup from icon */
