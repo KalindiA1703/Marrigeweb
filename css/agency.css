@@ -17,18 +17,10 @@ body {
 }
 
 .our-story, .team, .maps, .contact, .gallery, .about-us, .header  {
-  position: relative;
-  padding-bottom: 40px; /* Space below the content */
-}
-
-.our-story::after, .team::after, .maps::after, .contact::after, .gallery::after, .header::after, about-us::after{
-  content: "";
-  display: block;
-  width: 100%; /* Full width */
-  height: 20px; /* Thickness of the divider */
-  background-image: url('img/about1/border.jfif') no-repeat center;
-  background-size: 100% 100%; /* Stretch image to fit */
-  margin: 10px auto; /* Center and add spacing */
+  border-bottom:20px;
+  border-image:url('img/about1/border.jfif') no-repeat center;
+  border-size: 100% 100%;
+  margin-bottom:10px;
 }
 
 /* General Gallery Section */
