@@ -15,11 +15,13 @@ body {
 
 
  .our-story{
-   border-bottom: 20px;
-   border-image:url('img/about1/border.jfif');
-   margin:0px 0px 20px;
-  border-position:center;
- }
+  border-image-source: url(img/about1/border.jfif);
+  border-image-slice: 20;
+  border-image-width: 20;
+  border-image-outset: 1;
+  border-image-repeat: round;
+}
+ 
 
 
 
