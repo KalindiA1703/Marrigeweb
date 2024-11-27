@@ -11,12 +11,10 @@ body {
 }
 
 
-.our-story{
-  height:700px;
-  width:1500px;
-}
 
- section:not(:last-child):after {
+
+
+ .header::after {
       content: ""; /* Empty content for the divider */
       display: block;
       width: 100%; /* Full width of the section */
