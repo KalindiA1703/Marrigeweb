@@ -16,14 +16,16 @@ body {
   width:1500px;
 }
 
-.our-story, .team, .maps, .contact, .gallery, .about-us, .header {
-  border-width: 20px; /* Set the thickness of the border */
-  border-style: solid; /* Required for the border image to work */
-  border-image-source: url('img/about1/border.jfif'); /* Path to your border image */
-  border-image-slice: 30; /* Adjust to divide the image for use as a border */
-  border-image-repeat: stretch; /* Ensures the border stretches to fit */
-  margin-bottom: 10px; /* Optional spacing below the sections */
-}
+ section:not(:last-child):after {
+      content: ""; /* Empty content for the divider */
+      display: block;
+      width: 100%; /* Full width of the section */
+      height: 20px; /* Thickness of the divider */
+      background: url('img/about1/border.jfif') no-repeat center; /* Use your border image */
+      background-size: 100% 100%; /* Scale the image to fit */
+      margin: 20px auto 0; /* Space around the divider */
+    }
+
 
 
 /* General Gallery Section */
