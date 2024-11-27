@@ -14,15 +14,12 @@ body {
 
 
 
- .header::after {
-      content: ""; /* Empty content for the divider */
-      display: block;
-      width: 100%; /* Full width of the section */
-      height: 20px; /* Thickness of the divider */
-      background: url('img/about1/border.jfif') no-repeat center; /* Use your border image */
-      background-size: 100% 100%; /* Scale the image to fit */
-      margin: 20px auto 0; /* Space around the divider */
-    }
+ .header{
+   border-bottom: 20px;
+   border-image:url('img/about1/border.jfif');
+   margin:0px 0px 20px;
+  border-position:center;
+ }
 
 
 
