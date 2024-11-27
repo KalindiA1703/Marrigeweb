@@ -10,20 +10,8 @@ body {
   background-color: #2E0406;
 }
 
-.ourstory, .team, .maps, .contact, .gallery {
-  position: relative;
-  padding-bottom: 40px; /* Space below the content */
-}
 
-.ourstory:after, .team:after, .maps:after, .contact:after, .gallery:after {
-  content: "";
-  display: block;
-  width: 100%; /* Full width */
-  height: 20px; /* Thickness of the divider */
-  background: url('images/section-divider.png') no-repeat center;
-  background-size: 100% 100%; /* Stretch image to fit */
-  margin: 10px auto; /* Center and add spacing */
-}
+
 
 
 
@@ -873,7 +861,7 @@ aside.clients img {
 }
 
 section#contact {
-  background-color: #222222;
+  background-color: #2E0406;
   
 }
 section#contact .section-heading {
