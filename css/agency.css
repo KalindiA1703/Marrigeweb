@@ -16,12 +16,15 @@ body {
   width:1500px;
 }
 
-.our-story, .team, .maps, .contact, .gallery, .about-us, .header  {
-  border-bottom:20px;
-  border-image:url('img/about1/border.jfif') no-repeat center;
-  border-size: 100% 100%;
-  margin-bottom:10px;
+.our-story, .team, .maps, .contact, .gallery, .about-us, .header {
+  border-width: 20px; /* Set the thickness of the border */
+  border-style: solid; /* Required for the border image to work */
+  border-image-source: url('img/about1/border.jfif'); /* Path to your border image */
+  border-image-slice: 30; /* Adjust to divide the image for use as a border */
+  border-image-repeat: stretch; /* Ensures the border stretches to fit */
+  margin-bottom: 10px; /* Optional spacing below the sections */
 }
+
 
 /* General Gallery Section */
 .gallery {
