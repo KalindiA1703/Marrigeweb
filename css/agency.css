@@ -16,12 +16,12 @@ body {
   width:1500px;
 }
 
-.our-story, .team, .maps, .contact, .gallery {
+.our-story, .team, .maps, .contact, .gallery, .about-us, .header  {
   position: relative;
   padding-bottom: 40px; /* Space below the content */
 }
 
-.our-story:after, .team:after, .maps:after, .contact:after, .gallery:after {
+.our-story:after, .team:after, .maps:after, .contact:after, .gallery:after, .header:after, about-us:after{
   content: "";
   display: block;
   width: 100%; /* Full width */
